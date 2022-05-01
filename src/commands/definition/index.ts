@@ -31,7 +31,7 @@ export const execute = async (interaction: CommandInteraction) => {
         const definition = response?.Definition?.join('\n');
         if (!definition) throw new Error('No definition found');
 
-        return interaction.reply(definition);
+        return interaction.reply(`**${word}**\n\n${definition}`);
     } catch (e) {
         return interaction.reply(_sample(DEFINITION_NOT_FOUND_MSGS) ?? '');
     }
