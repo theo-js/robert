@@ -1,4 +1,6 @@
-require('dotenv').config();
+if (process.env.NODE_ENV === 'development') {
+    require('dotenv').config();
+}
 import { Client, Intents } from 'discord.js';
 import * as listeners from './listeners';
 
