@@ -1,9 +1,11 @@
 {
-    "name": "test",
+    "name": "robert",
     "version": "1.0.0",
-    "description": "",
+    "description": "A discord bot featuring a French - French dictionary",
     "main": "index.js",
     "scripts": {
+        "postinstall": "tsc",
+        "start": "node dist/commands/deploy-commands.js && node dist/index.js",
         "dev": "nodemon src/index.ts",
         "deploy-commands": "ts-node src/commands/deploy-commands.ts"
     },
